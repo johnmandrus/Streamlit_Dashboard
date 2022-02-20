@@ -1,39 +1,48 @@
+#------------------------------------------------------------------------------------#
+#IMPORTS                                                                             |
+#------------------------------------------------------------------------------------#
 import streamlit as st
+#------------------------------------------------------------------------------------#
 
-sidebar = st.sidebar.radio("Navigation",["Home","About Us"])
+
+
+#------------------------------------------------------------------------------------#
+#CREATE STREAMLIT DASHBOARD                                                          |
+#------------------------------------------------------------------------------------#
+
+sidebar = st.sidebar.radio("Navigation",["Home","EDA","Turbofan Dashboard","About Us"])
 
 if sidebar == "Home":
     header = st.container()
     with header:
-        st.title('Anomaly Detection for Rotating Machinery')
+        st.title('PeraML')
+        st.header('Failure Prediction for Rotating Machinery')
     
+    with open('homepage.txt', 'r') as file:
+        home_text = file.read()
+
     project_description = st.container()
     with project_description:
-        st.subheader('Project Description')
-        st.text("""Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-qui officia deserunt mollit anim id est laborum.""")
+        st.text(home_text)
+
+if sidebar == "EDA":
+    header = st.container()
+    with header:
+        st.title('Exploratory Data Analysis')
+
+if sidebar == "Turbofan Dashboard":
+    header = st.container()
+    with header:
+        st.title('Dashboard Goes Here')
 
 if sidebar == "About Us":
-    about_us = st.container()
-    with about_us:
-        st.title('About Us')
-        st.text("""Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-qui officia deserunt mollit anim id est laborum.""")
+    john, harvi, omar = st.columns(3)
+
+    with john:
+        st.image("john.jpg",caption="John Andrus",use_column_width=True)
     
+    with harvi:
+        st.image("harvi.jpg",caption="Harvi Singh",use_column_width=True)
 
-
-
-
-
-
-
+    with omar:
+        st.image("omar.jpg",caption="Omar Kapur",use_column_width=True)

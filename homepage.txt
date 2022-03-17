@@ -1,8 +1,0 @@
-We are building a better, cheaper, more intuitive way for 
-businesses to predict failures and reduce unplanned downtime. 
-PeraML (pronounced pear-ah-mel) comes from the Indonesian 
-word peramal which means clairvoyant, or fortune teller. 
-By creating tailored solutions for rotating machnery operators, 
-we aim to help our customers to look ahead at the future 
-of their own operationsand be better prepared for the challenges 
-that lay ahead.
